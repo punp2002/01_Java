@@ -5,9 +5,9 @@ public class VariableExample2 {
 	public static void main(String[] args) {
 		
 		/*
-		 * 자바의 기본 자료형 8가지
+		 * 자바의 기본 자료형 8가지 프리밋티드 타입
 		 * 
-		 * 논리형 : boolean (1byte)
+		 * 논리형 레퍼런스 타입 : boolean (1byte)
 		 * 정수형 : byte(1byte), short(2byte), int(4byte), long(8byte)
 		 * 실수형 : float(4byte), double(8byte)
 		 * 문자형 : char(2byte, 유니코드)
