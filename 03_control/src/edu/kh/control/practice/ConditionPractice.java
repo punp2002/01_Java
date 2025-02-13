@@ -27,20 +27,31 @@ public class ConditionPractice {
 		 * */
 		System.out.print("숫자를 한 개 입력하세요. : ");
 		int input = sc.nextInt();
-		
-		//String result; 결과 저장용 변수 선언
 				
-		if(input % 2 == 0) {
-			//if(input <= 0)
-			//result = "양수만 입력해주세요";
+		String result; // 결과 저장용 변수 선언
+		
+		if(input <= 0) {
+			result = "양수만 입력해주세요";
 			
-			
-			System.out.println("짝수입니다.");
-		} else if(input % 2 == 1) {
-			System.out.println("홀수입니다.");
-		} else if( input < 0 ) {
-			System.out.println("나이를 잘못 입력하셨습니다.");
+			if(input <= 0) {
+				result = "양수만 입력해주세요";
+				
+			} else if( input % 2 == 0 ) {
+				result = "짝수입니다";
+				
+			} else {
+				result = "홀수입니다";
+			}		
+			System.out.println(result);	
 		}
+		
+		//if(input % 2 == 0) {			
+		//	System.out.println("짝수입니다.");
+		//} else if(input % 2 == 1) {
+		//	System.out.println("홀수입니다.");
+		//} else if( input < 0 ) {
+		//	System.out.println("나이를 잘못 입력하셨습니다.");
+		//}
 			
 		}
 		
