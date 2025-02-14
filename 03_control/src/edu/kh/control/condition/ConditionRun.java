@@ -5,6 +5,8 @@ public class ConditionRun { // 실행용 클래스
 	public static void main(String[] args) {
 
 		ConditionEaxmple condition = new ConditionEaxmple();
+		
+		ConditionExampleIndivi condition2 = new ConditionExampleIndivi();
 		//condition.ex1();
 		//condition.ex2();
 		//condition.ex3();
@@ -14,7 +16,9 @@ public class ConditionRun { // 실행용 클래스
 		//condition.ex7();
 		//condition.ex8();
 		//condition.ex9();
-		condition.ex10();
+		//condition.ex10();
+		//condition2.indivi();
+		condition2.indivi2();
 		
 	}
 
