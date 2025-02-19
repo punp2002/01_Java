@@ -420,27 +420,23 @@ public class PracticeService {
 			// 3) 1 ~ 45 사이 난수 생성
 			int random = (int)(Math.random() * 10 + 1);
 			
-			// 4) 생성된 난수를 순서대로 배열요소에 대입
-			arr[i] = random;
 			
-			// 5) 중복 검사를 위한 for문 작성
-			for(int x = 0; x < i; x++) {
+			for(int x = 0; x < i; x++) { // 중복 제거용 for문
 				
-				// 6) 현재 생성된 난수와 같은수가
-				//	  앞쪽 요소에 있는지 검사
-				if(random == arr[x]) {
-										
-					break;
-					
-					
-				}
+				if (arr[i] == arr[x]) { // 앞쪽 요소에 대입된 값을 현재 요소에 대입된 값과 비교
 			}
-			System.out.print(arr[i] + " ");	
 		}
 	}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+}
 
 	public void practice12() {
-		
+		/*
+		 * 실습문제 12 로또 번호 자동 생성기 프로그램을 만들기. (중복 값 없이 오름차순으로 정렬하여 출력하세요.) [실행 화면] 3 4 15
+		 * 17 28 40
+		 */
 	}
 	
 	public void practice13() {
