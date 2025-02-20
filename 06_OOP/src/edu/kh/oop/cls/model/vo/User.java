@@ -11,7 +11,7 @@ public class User {
 	private int userAge;
 	private char userGender;
 	
-	
+	// 기본 생성자 자동완성 단축키 : ctrl + space + enter
 	// 기본 생성자( -> 매개변수가 없는 생성자 )
 	public User() {
 		// 기능
@@ -25,12 +25,17 @@ public class User {
 		userGender = '남';
 	}
 	
+	
 	// 매개변수 생성자
 	// 변수 : 매개변수, Overloading(오버로딩), this
+	
+	// 매개변수 생성자 자동완성
+	// alt + shift + s -> Generate Constructor using Fields.. -> generate
 	
 	// ** 매개변수 : 생성자나 메서드 호출 시 ()안에 작성되어
 	//		전달되어지는 값을 저장하고 있는 변수
 	// -> 전달받은 값을 저장하고 있는 매개체 역할의 변수
+	
 	public User(String userId, String userPw) {
 		System.out.println("매개변수 생성자를 이용하여 User 객체 생성");
 		
@@ -64,9 +69,42 @@ public class User {
 		this.userName = userName;
 		this.userAge = userAge;
 		this.userGender = userGender;
-		
 			
 	}
+	// 자바는 기본적으로 필드명, 생성자명 , 메서드명, 변수명의 
+	// 중복을 허용하지 않음
+	
+	// private String userId; // Duplicate field User.userId(중복됨)
+	// public User() {} // Duplicate method User() in type User
+	
+	// ** 오버로딩(Overloading) **
+	// - 클래스 내에 동일한 이름의 메서드 (생성자도 포함)를
+	// 여러개 작성하는 기법
+	
+	// [오버로딩 조건]
+	// 1) 메서드의 이름이 동일
+	// 2) 매개변수의 개수, 타임(자료형), 순서 중 1개라도 달라야 함
+	
+	//public User() {} // 기본생성자가 이미 작성되어있어서 x
+	
+	public User(String userId) {} // 매개변수의 개수가 같은 생성자가 없음
+	// -> 오버로딩 성립
+	
+	public User(int userAge) {} // 매개변수의 개수는 같지만 타입이 다름
+	// -> 오버로딩 성립
+	
+	public User(String userId, int userAge) {} 
+	// 매개변수의 개수와 동일한 것이 있으나, 하나의 타입이 다름
+	// -> 오버로딩 성립
+	
+	public User(int userAge, String userId) {}
+	// 매개변수의 개수와 타입은 같지만 순서가 다름
+	// -> 오버로딩 성립
+	
+	//public User(int userAge, String userName) {} // 에러
+	// 매개변수의 개수, 타입, 순서가 모두 같아서 불가
+	// -> 변수명은 신경쓰지 않는다.
+	
 	
 	
 	
@@ -101,7 +139,20 @@ public class User {
 	public void setUserGender(char userGender) {
 		this.userGender = userGender;
 	}
-		
+
+
+	// @Override : 메서드가 부모 클래스의 메서드를 "정확히" 재정의(오버라이딩) 검사	
+	// 1. 만약에 오타가 있거나, 부모 클래스에 없는 메서드를 잘못 작성했을 경우 컴파일 오류 발생
+	// 2. 이 메서드가 부모 클래스를 재정의 했다는 것을 한눈에 알 수 있음
+	
+	@Override // @(어노테이션) : 컴파일러 인식용 주석
+	public String toString() {
+		return "User [userId=" + userId + ", userPw=" + userPw + ", userName=" + userName + ", userAge=" + userAge
+				+ ", userGender=" + userGender + "]";
+	}
+	// toString() 메서드 : Object 최상위 클래스에 이미 만들어져있는 메서드
+		// 객체가 문자열로 변환될 때 호출되는 메서드
+		// -> 보통 객체의 필드값을 출력하는 용도로 오버라이딩해서 사용함.
 	
 	
 	/*

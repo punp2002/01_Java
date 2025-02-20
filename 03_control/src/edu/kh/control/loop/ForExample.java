@@ -189,9 +189,9 @@ public class ForExample { // 기능 제공용 클래스
 		// 9 -> 2단까지 역방향
 		// 곱해지는 수는 1 -> 9 까지 정방향
 		
-for(int dan = 9; dan >=2; dan--) { // 2단부터 9단까지 차례대로 증가
+for(int dan = 9; dan >=2; dan--) { 
 			
-			for(int num = 1; num <=9; num++) { // 각 단에 곱해질 수 1~9까지 차례대로 증가
+			for(int num = 1; num <=9; num++) { 
 				System.out.printf("%d X %d = %2d  ", dan, num, dan * num);
 			}
 			System.out.println();
