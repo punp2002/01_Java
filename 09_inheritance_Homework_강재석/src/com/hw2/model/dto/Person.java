@@ -28,6 +28,6 @@ public abstract class Person {
 	}
 
 	public abstract String getInfo();
-		
+	// Person 정보를 문자열로 리턴
 	
 }
