@@ -26,7 +26,7 @@ public class Toy {
 		
 		this.toymaterials = new HashSet<>();
 		
-		for( String str : toymaterials) {
+		for( String str : toymaterials ) {
 			
 			 this.toymaterials.add(str);
 				
@@ -104,11 +104,22 @@ public class Toy {
 
 	@Override
 	public String toString() {
+		String result = String.format("이름 : %s / 가격 : %d / 색상 : %s / 사용가능연령 : %d / 제조년월일 : %s / 재료 : ", toyname, toyprice , toycolor , toyage, toyyear);
+			int index = 0;
+			
+			for(String material : toymaterials) {
+				if(index == toymaterials.size() - 1) 
+					result += material;
+				else	
+					result += material + " , ";
+				
+				index++;
+				
+			}
 		
+				
+		return result;
 		
-		
-		return "이름: " + toyname + " / 가격" + toyprice + " / 색상 : " + toycolor + " / 사용가능연령 : " + toyage
-				+ " / " + toyyear + " / 재료 : " + toymaterials;
 	}
 	
 	

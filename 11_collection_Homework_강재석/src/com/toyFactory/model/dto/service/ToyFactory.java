@@ -23,10 +23,10 @@ public class ToyFactory {
 		
 		
 		Toy toy1 = new Toy("마미롱레그", 8, 36000, "분홍색", "19950805", "면직물", "고무");
-		Toy toy2 = new Toy("허기워기", 5, 12000, "파란색", "19940312", "면직물,플라스틱");
-		Toy toy3 = new Toy("키시미시", 5, 15000, "분홍색", "19940505", "면직물,플라스틱");
-		Toy toy4 = new Toy("캣냅", 8, 27000, "보라색", "19960128", "면직물,플래스틱");
-		Toy toy5 = new Toy("파피", 12, 57000, "빨간색", "19931225", "고무, 면직물");
+		Toy toy2 = new Toy("허기워기", 5, 12000, "파란색", "19940312", "면직물", "플라스틱");
+		Toy toy3 = new Toy("키시미시", 5, 15000, "분홍색", "19940505", "면직물" , "플라스틱");
+		Toy toy4 = new Toy("캣냅", 8, 27000, "보라색", "19960128", "면직물" , "플래스틱");
+		Toy toy5 = new Toy("파피", 12, 57000, "빨간색", "19931225", "고무" , "면직물");
 		
 		toyList.add(toy1);
 	    toyList.add(toy2);
@@ -83,7 +83,10 @@ public void displayMenu() {
 		}while(menuNum != 0);
 	}
 	public void selectAll() {
+		
 		System.out.println("<전체 장난감 목록>");
+		
+		
 		 for (Toy toy : toyList) {
 			 
 		     System.out.println(toy);
@@ -167,12 +170,7 @@ System.out.println("<새로운 장난감 추가>");
 	        for (int i = 0; i < toyList.size(); i++) {
 	            Toy toy = toyList.get(i);
 
-	            System.out.println((i + 1) + ". 이름: " + toy.getToyname() +
-	                    " / 가격: " + toy.getToyprice() +
-	                    " / 색상: " + toy.getToycolor() +
-	                    " / 사용가능연령: " + toy.getToyage() +
-	                    " / 제조일: " + toy.getToyyear() +
-	                    " / 재료: " + toy.getToymaterials());
+	            System.out.println(toy);
 	        }
 		
 	}
@@ -188,12 +186,7 @@ System.out.println("<새로운 장난감 추가>");
 	        for (int i = 0; i < toyList.size(); i++) {
 	            Toy toy = toyList.get(i);
 
-	            System.out.println((i + 1) + ". 이름: " + toy.getToyname() +
-	                    " / 가격: " + toy.getToyprice() +
-	                    " / 색상: " + toy.getToycolor() +
-	                    " / 사용가능연령: " + toy.getToyage() +
-	                    " / 제조일: " + toy.getToyyear() +
-	                    " / 재료: " + toy.getToymaterials());
+	            System.out.println(toy);
 	        }
 	
 		}
