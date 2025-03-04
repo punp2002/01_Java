@@ -436,8 +436,8 @@ public class StudentService {
 	 * 8.이름에 따라 정렬(가나다 순)
 	 */
 	public void sortByName() {
-										// 익명 내부클래스 는 Comparator 인터페이스를 상속받아
-										// 구현한 구현체(== 클래스)
+		
+										
 		Collections.sort(studentList, new Comparator<Student>(){
 
 			@Override

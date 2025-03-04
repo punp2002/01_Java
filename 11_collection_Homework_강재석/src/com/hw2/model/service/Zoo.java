@@ -18,7 +18,7 @@ public class Zoo {
 	}
     public void showAnimals() {
         for (Animal animal : animals) {
-            animal.sound();  // 각 동물의 울음소리 출력
+            animal.sound(); 
         }
     }
     public void displayMenu() {

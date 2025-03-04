@@ -1,13 +1,12 @@
 package com.hw3.model.service;
 
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 import com.hw3.model.dto.Book;
-
-import edu.kh.collection.pack1.model.dto.Student;
 
 
 
@@ -88,7 +87,7 @@ public void displayMenu() {
 		
 	}
 	public String addBook() {
-		System.out.println("======학생 정보 추가======");
+		System.out.println("======도서 정보 추가======");
 		
 		System.out.print("도서 번호 : ");
 		int bookNum = sc.nextInt();
@@ -145,53 +144,54 @@ public void displayMenu() {
 	}
 
 }
-	public void updateBook() {
+	public String updateBook() {
 		
-System.out.println("======학생 정보 수정======");
+System.out.println("======도서 정보 수정======");
 		
 		System.out.print("인덱스 번호 : ");
 		int index = sc.nextInt();
 		
 		// 1) 학생 정보가 studentList에 하나라도 있는지 검사
-		if(studentList.isEmpty()) {
-			return "입력된 학생정보가 없습니다.";
+		if(bookList.isEmpty()) {
+			return "입력된 도서정보가 없습니다.";
 		
 		// 2) 입력된 숫자가 0보다 작은지	
 		} else if(index < 0) {
 			return "음수는 입력할 수 없습니다.";
 			
 		// 3) studentList 범위 내 인덱스 번호인지 검사	
-		} else if(index >= studentList.size()) {
+		} else if(index >= bookList.size()) {
 			return "범위를 넘어선 값을 입력할 수 없습니다.";
 			
 		} else {
 			// 수정 코드 작성
 			// 1. index번째 저장된 학생정보 출력
-			System.out.println(index + "번째에 저장된 학생 정보");
-			System.out.println(studentList.get(index));
+			System.out.println(index + "번째에 저장된 도서 정보");
+			System.out.println(bookList.get(index));
 			
 			// 2. 수정할 내용 입력 받기
-			System.out.print("이름 : ");
-			
-			String name = sc.next();
-			System.out.print("나이 : ");
-			int age = sc.nextInt();
+			System.out.print("도서 번호 : ");
+			int bookNum = sc.nextInt();
 			sc.nextLine();
 			
-			System.out.print("사는 곳 : ");
-			String region = sc.nextLine();
+			System.out.print("도서 제목 : ");			
+			String bookName = sc.next();
 			
-			System.out.print("성별(M/F) : ");
-			char gender = sc.next().charAt(0);
+			System.out.print("도서 저자 : ");
+			String author = sc.nextLine();
 			
-			System.out.print("점수 : ");
-			int score = sc.nextInt();
+			System.out.print("도서 가격 : ");
+			int price = sc.nextInt();
+			sc.nextLine();
+			
+			System.out.print("출판사 : ");
+			String publisher = sc.nextLine();
 			
 			// 입력 받은 index번째에 수정할 학생정보를 세팅 -> 수정
 			// index번째에 있던 기존 학생 정보가 반환되고, 그 객체를 temp에 저장
-			Student temp = studentList.set(index, new Student(name, age, region, gender, score));
+			Book temp = bookList.set(index, new Book(bookNum, bookName, author, price, publisher));
 			
-			return temp.getName() + "의 정보가 변경되었습니다.";
+			return temp.getBookName() + "의 정보가 변경되었습니다.";
 			
 		}
 		
