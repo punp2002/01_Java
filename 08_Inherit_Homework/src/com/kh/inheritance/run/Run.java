@@ -16,6 +16,7 @@ public class Run {
 		BasicPhone bsp = new BasicPhone("Nokia", "3310", 2000, 10000 ,true);
 		
 		bsp.printinfo();
+		bsp.checkKeyboard();
 	}
 
 }

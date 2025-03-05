@@ -18,11 +18,7 @@ public class Phone {
 		
 	
 	}
-	public void printinfo() {
-		System.out.println("Brand : " + brand);
-		System.out.println("Model : " + model);
-		System.out.println("Year : " + year);
-		System.out.println("Price : " + price + "원");	}
+
 
 	public String getBrand() {
 		return brand;
@@ -55,7 +51,13 @@ public class Phone {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	public void printinfo() {
+		System.out.println("Brand : " + brand);
+		System.out.println("Model : " + model);
+		System.out.println("Year : " + year);
+		System.out.println("Price : " + price + "원");	
+		}
 	
-	}
+}
 	
 

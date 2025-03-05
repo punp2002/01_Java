@@ -12,7 +12,7 @@ public class Run {
 		// 1. 객체배열을 크기3으로 할당한 뒤 3개의 생성자를 각각 이용하여 객체 생성 후 출력
 		Employee[] emplArr = new Employee[3];
 		
-		emplArr[0] = new Employee();
+		emplArr[0] = new Employee(); // 기본생성자
 		emplArr[1] = new Employee(1, "홍길동", 19, 'M', "01022223333", "서울 잠실" );
 		emplArr[2] = new Employee(2, "강말순", "교육부", "강사", 20, 'f', 
 						1000000, 0.01, "01011112222","서울 마곡" );
